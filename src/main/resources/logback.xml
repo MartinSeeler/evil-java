@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- see http://logback.qos.ch/manual/layouts.html#coloring -->
+    <withJansi>false</withJansi>
+    <encoder>
+      <pattern>[%date{ISO8601}] [%t] [%-5level] [%logger{0}] - %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+  <root level="ALL">
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>
